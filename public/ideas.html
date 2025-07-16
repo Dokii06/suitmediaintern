@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ideas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/banner.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Header -->
+<div id="header-placeholder"></div>
+
+<!-- Banner -->
+<section class="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
+    <!-- Gambar banner (dari CMS) -->
+    <div class="absolute inset-0 z-0 parallax-img">
+        <img src="assets/banner.jpg" alt="Banner" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Teks -->
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-extrabold drop-shadow-lg leading-tight">
+            Ideas
+        </h1>
+        <p class="mt-4 text-base sm:text-lg md:text-xl text-white max-w-2xl drop-shadow-md">
+            Where all our great things begin
+        </p>
+    </div>
+
+
+    <!-- Area miring -->
+    <div class="absolute bottom-0 left-0 w-full h-64 z-20">
+        <div class="w-full h-full bg-white clip-diagonal"></div>
+    </div>
+
+</section>
+
+<!-- Konten utama -->
+<main class="pt-16 max-w-7xl mx-auto px-6 space-y-10">
+    <!-- Filter bar -->
+    <div class="flex flex-col md:flex-row justify-between gap-4 md:items-center">
+        <!-- Kiri: Info jumlah data -->
+        <div id="result-info" class="text-sm text-gray-600"></div>
+
+        <!-- Kanan: Filter sort & per page -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 bg-white shadow rounded-xl px-4 py-3 border border-gray-200">
+            <!-- Sort -->
+            <div class="flex items-center gap-2">
+                <label for="sort" class="text-sm font-semibold text-gray-700 whitespace-nowrap">Urutkan:</label>
+                <select id="sort" class="border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="-published_at">Terbaru</option>
+                    <option value="published_at">Terlama</option>
+                </select>
+            </div>
+
+            <!-- Per Page -->
+            <div class="flex items-center gap-2">
+                <label for="perPage" class="text-sm font-semibold text-gray-700 whitespace-nowrap">Tampilkan:</label>
+                <select id="perPage" class="border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+                <span class="text-sm text-gray-500">/ halaman</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- List Posts -->
+    <div id="posts-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="flex justify-center space-x-2 mt-8 mb-8"></div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-10 mt-16">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        
+        <!-- Kiri: Deskripsi -->
+        <div>
+        <h2 class="text-xl font-semibold mb-2">Suitmedia</h2>
+        <p class="text-sm text-gray-400 max-w-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloremque inventore expedita sunt adipisci esse, sit vitae natus iure corporis nisi odit ipsum provident ipsa sapiente possimus rerum explicabo id!
+        </p>
+        </div>
+
+        <!-- Kanan: Link navigasi -->
+        <div class="flex flex-col sm:flex-row gap-6">
+        <div>
+            <h3 class="font-semibold mb-2">Quick Links</h3>
+            <ul class="space-y-1 text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="font-semibold mb-2">Connect</h3>
+            <ul class="space-y-1 text-sm text-gray-400">
+            <li><a href="mailto:zaldyseno06@gmail.com" class="hover:text-white">Email</a></li>
+            <li><a href="https://github.com" class="hover:text-white" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+        &copy; 2025. All rights reserved.
+    </div>
+</footer>
+
+
+<script src="js/header.js"></script>
+<script src="js/banner.js"></script>
+<script src="js/ideas.js"></script>
+</body>
+</html>

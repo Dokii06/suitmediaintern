@@ -1,0 +1,40 @@
+<!-- Overlay untuk mobile -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+
+<!-- Header -->
+<header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-transform duration-300 bg-orange-600 backdrop-blur-lg shadow-md">
+    <nav class="px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center">
+            <img src="assets/suitmedia.png" alt="logo" class="h-12 mr-6" />
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <ul id="menu-desktop" class="hidden md:flex space-x-6">
+            <li><a href="work.html" class="nav-link text-white font-medium transition hover:text-gray-300">Work</a></li>
+            <li><a href="about.html" class="nav-link text-white font-medium transition hover:text-gray-300">About</a></li>
+            <li><a href="services.html" class="nav-link text-white font-medium transition hover:text-gray-300">Services</a></li>
+            <li><a href="ideas.html" class="nav-link text-white font-medium transition hover:text-gray-300">Ideas</a></li>
+            <li><a href="careers.html" class="nav-link text-white font-medium transition hover:text-gray-300">Careers</a></li>
+            <li><a href="contact.html" class="nav-link text-white font-medium transition hover:text-gray-300">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Mobile -->
+        <button id="menu-btn" aria-expanded="false" class="md:hidden text-white text-3xl focus:outline-none z-50">
+            <span id="menu-icon">☰</span>
+        </button>
+        </div>
+
+        <!-- SIDEBAR MOBILE -->
+        <ul id="menu"
+        class="fixed top-0 right-0 w-64 h-screen bg-orange-600 text-white p-6 pt-16 flex-col space-y-6 z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+            <li class="text-lg font-semibold border-b pb-2">MENU</li>
+            <li><a href="work.html" class="nav-link font-medium transition hover:text-gray-200">Work</a></li>
+            <li><a href="about.html" class="nav-link font-medium transition hover:text-gray-200">About</a></li>
+            <li><a href="services.html" class="nav-link font-medium transition hover:text-gray-200">Services</a></li>
+            <li><a href="ideas.html" class="nav-link font-medium transition hover:text-gray-200">Ideas</a></li>
+            <li><a href="careers.html" class="nav-link font-medium transition hover:text-gray-200">Careers</a></li>
+            <li><a href="contact.html" class="nav-link font-medium transition hover:text-gray-200">Contact</a></li>
+        </ul>
+    </nav>
+</header>
